@@ -2,13 +2,7 @@
   export: [
     locals_without_parens: [
       # Phoenix.Channel
-      broadcast: 3,
-      broadcast!: 3,
-      broadcast_from: 3,
-      broadcast_from!: 3,
       intercept: 1,
-      push: 3,
-      reply: 2,
 
       # Phoenix.Router
       connect: 3,
@@ -39,6 +33,9 @@
       resources: 3,
       resources: 4,
       trace: 4,
+
+      # Phoenix.Controller
+      action_fallback: 1,
 
       # Phoenix.Endpoint
       socket: 2,
