@@ -9,6 +9,7 @@
       intercept: 1,
       push: 3,
       reply: 2,
+
       # Phoenix.Router
       connect: 3,
       connect: 4,
@@ -28,7 +29,6 @@
       patch: 3,
       patch: 4,
       pipe_through: 1,
-      pipeline: 2,
       plug: 1,
       plug: 2,
       post: 3,
@@ -38,17 +38,17 @@
       resources: 2,
       resources: 3,
       resources: 4,
-      scope: 2,
-      scope: 3,
-      scope: 4,
       trace: 4,
+
       # Phoenix.Endpoint
       socket: 2,
+
       # Phoenix.Socket
       channel: 2,
       channel: 3,
       transport: 2,
       transport: 3,
+
       # Phoenix.ChannelTest
       assert_broadcast: 2,
       assert_broadcast: 3,
@@ -64,6 +64,7 @@
       refute_reply: 2,
       refute_reply: 3,
       refute_reply: 4,
+
       # Phoenix.ConnTest
       assert_error_sent: 2
     ]
