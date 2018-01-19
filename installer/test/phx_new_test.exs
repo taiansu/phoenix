@@ -133,6 +133,9 @@ defmodule Mix.Tasks.Phx.NewTest do
       assert_file "phx_blog/lib/phx_blog_web/gettext.ex", ~r"defmodule PhxBlogWeb.Gettext"
       assert File.exists?("phx_blog/priv/gettext/errors.pot")
       assert File.exists?("phx_blog/priv/gettext/en/LC_MESSAGES/errors.po")
+
+      # Formatter
+      assert_file "phx_blog/.formatter.exs"
     end
   end
 
@@ -167,6 +170,9 @@ defmodule Mix.Tasks.Phx.NewTest do
       assert_file "phx_blog/config/test.exs", &refute(&1 =~ config)
       assert_file "phx_blog/config/prod.secret.exs", &refute(&1 =~ config)
       assert_file "phx_blog/lib/phx_blog_web.ex", &refute(&1 =~ ~r"alias PhxBlog.Repo")
+      assert_file "phx_blog/.formatter.exs", fn file ->
+        refute file =~ ":ecto"
+      end
 
       # No HTML
       assert File.exists?("phx_blog/test/phx_blog_web/controllers")
@@ -205,6 +211,7 @@ defmodule Mix.Tasks.Phx.NewTest do
       assert_file "phx_blog/priv/static/images/phoenix.png"
       assert_file "phx_blog/priv/static/js/phoenix.js"
       assert_file "phx_blog/priv/static/js/app.js"
+      assert_file "phx_blog/.formatter.exs"
     end
   end
 
@@ -243,6 +250,7 @@ defmodule Mix.Tasks.Phx.NewTest do
       assert_file "custom_path/lib/phx_blog_web/endpoint.ex", ~r/app: :phx_blog/
       assert_file "custom_path/config/config.exs", ~r/namespace: PhoteuxBlog/
       assert_file "custom_path/lib/phx_blog_web.ex", ~r/use Phoenix.Controller, namespace: PhoteuxBlogWeb/
+      assert_file "custom_path/.formatter.exs"
     end
   end
 

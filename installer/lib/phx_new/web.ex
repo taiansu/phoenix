@@ -21,6 +21,7 @@ defmodule Phx.New.Web do
     {:eex,  "phx_web/views/error_view.ex",            :web, "lib/:web_app/views/error_view.ex"},
     {:eex,  "#{@pre}/mix.exs",                        :web, "mix.exs"},
     {:eex,  "#{@pre}/README.md",                      :web, "README.md"},
+    {:eex,  "phx_assets/bare/formatter.exs",          :web, ".formatter.exs"},
     {:keep, "phx_test/channels",                      :web, "test/:web_app/channels"},
     {:keep, "phx_test/controllers",                   :web, "test/:web_app/controllers"},
     {:eex,  "#{@pre}/test/test_helper.exs",           :web, "test/test_helper.exs"},
